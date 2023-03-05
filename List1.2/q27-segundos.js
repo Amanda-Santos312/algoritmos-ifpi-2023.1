@@ -1,9 +1,9 @@
 //Leia um número inteiro de segundos, calcule e escreva quantas horas, quantos minutos e quantos segundos ele corresponde.
-import {input} from '../io_utils.js'
+import {question} from 'readline-sync'
 
 function main() {
     //Entrada
-    const s = Number(input('Segundos: '))
+    const s = Number(question('Segundos: '))
 
     //Processamento
     const horas  = Math.floor(s / 3600)

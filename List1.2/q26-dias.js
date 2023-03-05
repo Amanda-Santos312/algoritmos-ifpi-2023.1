@@ -1,8 +1,9 @@
 //Leia um número inteiro de dias, calcule e escreva quantas semanas e quantos dias ele corresponde.
+import {question} from 'readline-sync'
 
 function main() {
     //Entrada
-    const d = Number(input('Dias: ')) //Dias iniciais
+    const d = Number(question('Dias: ')) //Dias iniciais
 
     //Processamento
     const semanas = Math.floor(d / 7)

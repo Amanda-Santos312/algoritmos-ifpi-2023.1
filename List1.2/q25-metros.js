@@ -1,9 +1,9 @@
 //Leia um número inteiro de metros, calcule e escreva quantos Km e quantos metros ele corresponde.
-import {input} from '../io_utils.js'
+import {question} from 'readline-sync'
 
 function main() {
     //Entrada
-    const m = Number(input('Valor para metros: '))
+    const m = Number(question('Valor para metros: '))
 
     //Processamento
     const km = Math.floor(m / 1000)

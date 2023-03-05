@@ -1,9 +1,9 @@
 //Leia um valor em m, calcule e escreva o equivalente em cm.
-import {input} from '../io_utils.js'
+import {question} from 'readline-sync'
 
 function main() {
     //Entrada
-    const m = Number(input('Valor para metros: '))
+    const m = Number(question('Valor para metros: '))
 
     //Processamento
     const cm = m * 100
