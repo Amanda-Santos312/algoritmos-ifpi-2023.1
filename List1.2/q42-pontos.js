@@ -11,10 +11,7 @@ function main () {
     const distancia_x = (x2 - x1)**2
     const distancia_y = (y2 - y1)**2
 
-    const raiz_quadrada = 
-    
-
-
+    //const raiz_quadrada = 
 
 }
 main()

@@ -5,3 +5,8 @@ mercadoria for R$ 302,00, a entrada é de R$ 102,00 e as duas prestações são 
 Escreva um algoritmo que receba o valor da mercadoria e forneça o valor da entrada e das duas
 prestações, de acordo com as regras acima. */
 import {question} from 'readline-sync'
+
+function main () { 
+    
+}
+main()

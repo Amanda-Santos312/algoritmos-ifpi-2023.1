@@ -7,3 +7,8 @@ indicar uma nota de R$ 50, três notas de R$ 10, uma nota de R$ 5 e duas notas d
 algoritmo que receba o valor da quantia solicitada e retorne a distribuição das notas de acordo com o
 critério da distribuição ótima. */
 import {question} from 'readline-sync'
+
+function main () { 
+    
+}
+main()
