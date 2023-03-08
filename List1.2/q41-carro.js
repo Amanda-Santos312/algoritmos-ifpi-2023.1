@@ -3,7 +3,7 @@ Supondo que a percentagem do distribuidor seja de 28% e os impostos de 45%,
 escreva um algoritmo que leia o custo de fábrica de um carro e escreva o custo ao consumidor. */
 import {question} from 'readline-sync'
 
-function main () { 
+function main() { 
     //Entrada
     const custo_fabrica = Number(question('Valor para custo o de fabrica: '))
 

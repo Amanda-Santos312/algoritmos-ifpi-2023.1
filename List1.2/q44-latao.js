@@ -2,7 +2,7 @@
 quantidade de cada um desses componentes para se obter certa quantidade de latão (em kg), informada pelo usuário. */
 import {question} from 'readline-sync'
 
-function main () {
+function main() {
     //Entrada
     const qtd_cobre = Number(question('Quantidade de cobre em kg: '))
     const qtd_zinco = Number(question('Quantidade de zinco em kg: '))

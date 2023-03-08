@@ -8,7 +8,14 @@ algoritmo que receba o valor da quantia solicitada e retorne a distribuição da
 critério da distribuição ótima. */
 import {question} from 'readline-sync'
 
-function main () { 
+function main() {
+    //Entrada
+    const quantia = Number(question('Quantia desejada para sacar: '))
+
+    //Processamento
     
+
+    //Saída
+    console.log()
 }
 main()

@@ -6,7 +6,17 @@ Escreva um algoritmo que receba o valor da mercadoria e forneça o valor da entr
 prestações, de acordo com as regras acima. */
 import {question} from 'readline-sync'
 
-function main () { 
-    
+function main() { 
+    //Entrada
+    const valor_produto = Number(question('Valor do produto: '))
+
+    //Processamento
+    const resto = valor_produto % 3
+    const parcelas = (valor_produto - resto) / 3
+    const entrada = (parcelas + resto).toFixed(2)
+
+    //Saida
+    console.log(`\nO cliente irá pagar: `)
+    console.log(`\n1 entrada de ${entrada} reais e duas prestções de ${parcelas} reais.`)
 }
 main()

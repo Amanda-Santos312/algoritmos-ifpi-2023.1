@@ -2,7 +2,7 @@
 Escreva um algoritmo que leia os coeficientes a, b, c, d, e e f, calcule e escreva os valores de x e y. */
 import {question} from 'readline-sync'
 
-function main () {
+function main() {
     //Entrada
     const a = Number(question('Valor para a: '))
     const b = Number(question('Valor para b: '))

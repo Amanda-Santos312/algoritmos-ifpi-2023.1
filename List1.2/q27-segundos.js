@@ -6,12 +6,11 @@ function main() {
     const s = Number(question('Segundos: '))
 
     //Processamento
-/*  const horas  = 
-    const resto = 
-    const minutos =  
-    const segundos = 
-*/
+    const horas = Math.floor(s / 3600)
+    const minutos = Math.floor(s / 60) % 60
+    const segundos = s % 60
+    
     //Saída
-    console.log(`${horas}:${minutos}:${segundos}`)
+    console.log(`${horas}h:${minutos}min:${segundos}s`)
 }
 main() 

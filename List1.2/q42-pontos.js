@@ -2,7 +2,7 @@
 ponto2 (x2,y2), escreva a distância entre eles, conforme fórmula abaixo. -VER FÓRMULA- */
 import {question} from 'readline-sync'
 
-function main () { 
+function main() { 
     //Entrada
     const x1 = Number(question('Valor para x1: '))
     const y1 = Number(question('Valor para y1: '))
