@@ -1,4 +1,5 @@
-/* Índice de Adiposidade Corporal (iac) é um método utilizado para medir a gordura corporal. Para o cálculo desse índice são utilizadas medidas antropométricas, como circunferência do quadril e altura.
+/* Índice de Adiposidade Corporal (iac) é um método utilizado para medir a gordura corporal. 
+Para o cálculo desse índice são utilizadas medidas antropométricas, como circunferência do quadril e altura.
 
 De acordo com essa informação, peça ao usuário o valor do seu quadril e de sua altura.
 Fórmula: IAC = (quadril / (altura * sqrt(altura))) - 18
@@ -17,19 +18,19 @@ function main() {
     const altura = Number(question('Digite a sua altura: '))
 
     //Processamento
-    const iac = Math.abs(calcula_iac(quadril, altura))
-    const situacao = verifica_indice(iac)
+    const iac = Math.abs(calcula_iac(quadril, altura)) //Pega o valor absoluto (positivo).
+    //const situacao = verifica_indice(iac)
 
     //Saída
-    console.log(`O seu Índice de Adiposidade Corporal é de ${iac.toFixed(2)}`)
-    console.log(`A sua situação quando ao iac é de ${situacao}`)
+    console.log(`\nSeu Índice de Adiposidade Corporal é de ${iac.toFixed(2)}%`)
+    //console.log(`A sua situação quando ao iac é de ${situacao}`)
 }
 
 function calcula_iac(quadril, altura) {
     return (quadril / (altura * Math.sqrt(altura))) - 18
 }
 
-function verifica_indice(iac) {
+/*function verifica_indice(iac) {
     if (iac >= 0 && iac <= 8.9){
         return 'magreza!'
     }else if (iac >= 9 && iac <= 20.9){
@@ -40,5 +41,6 @@ function verifica_indice(iac) {
         return "obesidade grau 1!"
     }
 }
+*/
 
 main()

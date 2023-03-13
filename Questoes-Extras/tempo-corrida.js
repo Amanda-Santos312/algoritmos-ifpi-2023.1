@@ -13,15 +13,21 @@ function main() {
     const velocidade_media = Number(question('Velocidade média do atleta(km/h): '))
 
     //Processamento
-    const tempo = Math.floor(calcula_tempo_prova(distancia, velocidade_media))
+    const nova_velocidade = converte_velocidade(velocidade_media)
+    const tempo = Math.floor(calcula_tempo_prova(distancia, nova_velocidade))
+    
 
     //Saída
-    console.log(`O tempo de prova foi de ${tempo} minutos`)
+    console.log(`O tempo de prova foi de ${tempo.toFixed(1)} minutos`)
 
 }
 
-function calcula_tempo_prova(distancia, velocidade_media) {
-    return (distancia / (velocidade_media * 1000)) * 60
+function converte_velocidade(velocidade_media) {
+    return ((velocidade_media * 1000) / 60) * 60
+}
+
+function calcula_tempo_prova(distancia, nova_velocidade) {
+    return (distancia / (nova_velocidade * 1000)) * 60
 }
 
 main()
