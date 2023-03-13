@@ -9,6 +9,6 @@ function main() {
     const aumento_salarial = salário + (salário * 0.25) 
 
     //Saída
-    console.log(`O novo salario com 25% de aumento é: ${aumento_salarial}`)
+    console.log(`O novo salario com 25% de aumento é: $${aumento_salarial}reais`)
 }
 main()

@@ -10,6 +10,6 @@ function main() {
     const comprimento = 2 * pi * raio
 
     //Saída
-    console.log(`O comprimento da circunferência é de ${comprimento.toFixed(1)}`)
+    console.log(`O comprimento da circunferência é de ${comprimento.toFixed(1)}cm`)
 }
 main()
