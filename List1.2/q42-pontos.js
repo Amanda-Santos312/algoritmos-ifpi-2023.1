@@ -15,7 +15,7 @@ function main() {
     const distancia = Math.sqrt(x + y)
 
     //Saída
-    console.log(`A distância é de ${distancia.toFixed(2)}`)
+    console.log(`A distância entre os pontos é de ${distancia.toFixed(2)}`)
 
 }
 main()

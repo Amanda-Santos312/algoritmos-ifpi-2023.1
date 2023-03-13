@@ -2,18 +2,19 @@
 import {question} from 'readline-sync'
 
 function main() {
-//Entrada
-    const a = Number(input('Número 1: '))
-    const b = Number(input('Número 2: '))
-    const c = Number(input('Número 3: '))
+    //Entrada
+    const a = Number(question('Número 1: '))
+    const b = Number(question('Número 2: '))
+    const c = Number(question('Número 3: '))
 
-//Processamento
+    //Processamento
     const r = (a + b) * (a + b) 
     const s = (b + c) * (b + c) 
 
     const d = (r + s) / 2
 
-    console.log(`A expressão tem valor ${d}`)
+    //Saída
+    console.log(`A expressão tem valor: ${d}`)
 }
 main()
 

@@ -9,6 +9,6 @@ function main() {
     const fahreheit_celsius = ((5 * fahreheit) - 160) / 9
 
     //Saída
-    console.log(`A temperatura em celsius é ${fahreheit_celsius.toFixed(1)}°C`)
+    console.log(`A temperatura em Celsius é ${fahreheit_celsius.toFixed(1)}°C`)
 }
 main()
