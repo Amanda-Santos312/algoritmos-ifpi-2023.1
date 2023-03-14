@@ -22,6 +22,8 @@ function main() {
 
 }
 
+// velocidade média = distancia / tempo
+
 function converte_velocidade(velocidade_media) {
     return ((velocidade_media * 1000) / 60) * 60
 }

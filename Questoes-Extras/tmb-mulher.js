@@ -9,7 +9,7 @@ import {question} from 'readline-sync'
 
 function main() { 
     //Entrada
-    const peso = Number(question('Digite o valor do seu peso: '))
+    const peso = Number(question('Digite o valor do seu peso(kg): '))
     const altura = Number(question('Digite o valor da sua altura(cm): '))
     const idade = Number(question('Digite a sua idade: '))
 
