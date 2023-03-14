@@ -29,8 +29,6 @@ function main() {
     console.log('\nPara atingir o objetivo:')
     
     console.log(`Você tem que gastar diariamente ${gasto_diario.toFixed(2)} kcal com atividades físicas!`)
-
-    console.log()
 }
 
 function calcula_deficit_calorico_diario(peso, meta) {
