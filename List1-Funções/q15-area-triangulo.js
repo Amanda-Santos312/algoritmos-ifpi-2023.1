@@ -1,10 +1,10 @@
 //Leia o valor da base e altura de um triângulo, calcule e escreva sua área. (área=(base * altura)/2)
-import {input} from '../io_utils.js'
+import {question} from 'readline-sync'
 
 function main() {
     //Entrada
-    const base = Number(input('Valor para a base do triangulo: '))
-    const altura = Number(input('Valor para a altura do triangulo: '))
+    const base = Number(question('Valor para a base do triangulo: '))
+    const altura = Number(question('Valor para a altura do triangulo: '))
 
     //Processamento
     const area = calcula_area(base, altura)

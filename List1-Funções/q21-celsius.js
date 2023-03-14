@@ -1,9 +1,9 @@
 //Leia uma temperatura em °F, calcule e escreva a equivalente em °C. (t°C = (5 * t°F - 160) / 9)
-import {input} from '../io_utils.js'
+import {question} from 'readline-sync'
 
 function main() {
     //Entrada
-    const fahreheit = Number(input('Temperatura em Fahrenheit: '))
+    const fahreheit = Number(question('Temperatura em Fahrenheit: '))
 
     //Processamento
     const celsius = transforma_fahrenheit_celsius(fahreheit)

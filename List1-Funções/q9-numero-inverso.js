@@ -1,10 +1,10 @@
 //Leia 2 números (A, B) e escreva-os em ordem inversa (B, A).
-import {input} from '../io_utils.js'
+import {question} from 'readline-sync'
 
 function main() {
     //Entrada
-    const numero1 = Number(input('Primeiro número: '))
-    const numero2 = Number(input('Segundo número: '))
+    const numero1 = Number(question('Primeiro número: '))
+    const numero2 = Number(question('Segundo número: '))
 
     //Processamento 
     const num_2 = segundo_num(numero2)

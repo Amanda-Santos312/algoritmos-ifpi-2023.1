@@ -1,9 +1,9 @@
 //Leia o salário de um trabalhador e escreva seu novo salário com um aumento de 25%
-import {input} from '../io_utils.js'
+import {question} from 'readline-sync'
 
 function main() {
     //Entrada
-    const salário = Number(input('Digite um valor para salario: '))
+    const salário = Number(question('Digite um valor para salario: '))
 
     //Processamento
     const aumento = calcula_aumento_salarial(salário)
