@@ -7,7 +7,7 @@ function main() {
 
     //Processamento
     const min = minutos % 60 //Os minutos serão só o resto da divisão
-    const horas = (minutos - min) / 60 
+    const horas = (minutos - min) / 60
 
     //Saída
     console.log(`${horas}h e ${min}min`)
