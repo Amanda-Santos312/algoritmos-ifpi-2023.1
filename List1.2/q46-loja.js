@@ -13,10 +13,10 @@ function main() {
     //Processamento
     const resto = valor_produto % 3
     const parcelas = (valor_produto - resto) / 3
-    const entrada = (parcelas + resto).toFixed(2)
+    const entrada = parcelas + resto
 
     //Saida
     console.log(`\nO cliente irá pagar: `)
-    console.log(`\n1 entrada de ${entrada} reais e duas prestções de ${parcelas} reais.`)
+    console.log(`\n1 entrada de ${entrada.toFixed(2)} reais e duas prestções de ${parcelas} reais.`)
 }
 main()
