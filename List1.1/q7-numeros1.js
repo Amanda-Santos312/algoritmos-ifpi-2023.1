@@ -9,9 +9,9 @@ function main() {
 
     //Processamento
     const soma = numero1 + numero2
-    const diferença = numero2 - numero3
+    const diferenca = numero2 - numero3
 
     //Saída
-    console.log(`A soma dos dois primeiros números é ${soma} e a diferença dos dois últimos números é ${diferença}`)
+    console.log(`A soma dos dois primeiros números é ${soma} e a diferença dos dois últimos números é ${diferenca}`)
 }
 main()
