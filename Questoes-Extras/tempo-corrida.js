@@ -23,5 +23,4 @@ function main() {
 function calcula_tempo_prova(distancia, velocidade_media) {
     return (distancia / (velocidade_media * 1000)) * 60 //para chegar nos metros e depois multiplica por 60 min
 }
-
 main()
