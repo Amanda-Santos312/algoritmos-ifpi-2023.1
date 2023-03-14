@@ -23,5 +23,4 @@ function main() {
 function calcula_tmb(peso, altura, idade) {
     return 447.6 + (9.2 * peso) + (3.1 * altura) - (4.3 * idade)
 }
-
 main()

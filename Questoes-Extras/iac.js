@@ -43,5 +43,4 @@ function calcula_quadril_min(altura) {
 function calcula_quadril_max(altura) {
     return (20.9 + 18) * (altura * Math.sqrt(altura))
 }
-
 main()

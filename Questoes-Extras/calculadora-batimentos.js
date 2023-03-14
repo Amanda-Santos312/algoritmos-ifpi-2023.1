@@ -47,5 +47,4 @@ function calcula_fc_ideal_ativ_intensa_min(fc_max) {
 function calcula_fc_ideal_ativ_intensa_max(fc_max) {
     return 0.85 * fc_max
 }
-
 main()

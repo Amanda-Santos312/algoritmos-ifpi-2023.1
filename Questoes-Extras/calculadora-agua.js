@@ -9,7 +9,6 @@ import {question} from 'readline-sync'
 function main() {
     //Entrada
     const peso = Number(question('Qual é o seu peso? '))
-    const ativ_fisica = question('Atividade física (moderada ou intensa): ')
 
     //Processamento 
     const qtd_agua_m = calcula_qtd_agua_ativ_moderada(peso)
@@ -43,5 +42,4 @@ function calcula_qtd_agua_ativ_intensa(peso) {
     }
 } 
 */
-
 main()

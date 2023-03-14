@@ -50,5 +50,4 @@ function calcula_kcal_diarias(kcal_totais, dias) {
 function calcula_gasto_diario(kcal_diarias,consumo_kcal) {
     return kcal_diarias + consumo_kcal
 }
-
 main()
