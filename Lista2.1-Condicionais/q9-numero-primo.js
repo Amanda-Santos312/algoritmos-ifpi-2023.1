@@ -1,0 +1,1 @@
+//Leia 1 (um) número entre 0 e 100, verifique e escreva se o número é ou não primo.
