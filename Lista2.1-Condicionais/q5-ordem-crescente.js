@@ -8,7 +8,7 @@ function main() {
 
     const crescente = forma_crescente(num1, num2, num3)
 
-    console.log(`A forma crescente desses números é: ${crescente}`)
+    console.log(`A forma crescente é: ${crescente}`)
 }
 
 function forma_crescente(num1, num2, num3) {

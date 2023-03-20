@@ -2,7 +2,7 @@
 import {question} from 'readline-sync'
 
 function main(){
-    const numero = Number(question('Digite um numero de 2 dígitos: '))
+    const numero = Number(question('Digite um nÚmero de 2 dígitos: '))
 
     const algarismos = verifica_algarismmos(numero)
 

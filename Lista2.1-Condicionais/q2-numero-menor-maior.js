@@ -18,7 +18,7 @@ function verifica_menor(num1, num2) {
     } else if (num2 > num1){
         return (`${num1}`)
     } else {
-        return ('nenhum, pois são iguais!')
+        return ('Nenhum, pois são iguais!')
     }
 }
 
@@ -28,7 +28,8 @@ function verifica_maior(num1, num2) {
     } else if (num2 > num1){
         return (`${num2}`)
     } else {
-        return ('nenhum, pois são iguais!')
+        return ('Nenhum, pois são iguais!')
     }
 }
+
 main()

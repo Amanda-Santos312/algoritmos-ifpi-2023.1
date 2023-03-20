@@ -8,7 +8,7 @@ function main() {
 
     const numeros_iguais = verifica_numeros_iguais(num1, num2, num3)
 
-    console.log(`Temos ${numeros_iguais} numeros iguais`)
+    console.log(`Temos ${numeros_iguais} números iguais`)
 }
 
 function verifica_numeros_iguais(num1, num2, num3) {

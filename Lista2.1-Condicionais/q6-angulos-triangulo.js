@@ -5,9 +5,9 @@ obtusângulo (1 ângulo > 90º). Não existe ângulo com tamanho 0º (zero grau)
 import {question} from 'readline-sync'
 
 function main() {
-    const angulo1 = Number(question('Numero1: '))
-    const angulo2 = Number(question('Numero2: '))
-    const angulo3 = Number(question('Numero3: '))
+    const angulo1 = Number(question('Número1: '))
+    const angulo2 = Number(question('Número2: '))
+    const angulo3 = Number(question('Número3: '))
 
     const triangulo = eh_triangulo(angulo1, angulo2, angulo3)
     const tipo = verifica_tipo(angulo1, angulo2, angulo3)
