@@ -16,5 +16,4 @@ function verificar_numero(numero) {
         return 'Não é primo!'
     }
 }
-
 main()
