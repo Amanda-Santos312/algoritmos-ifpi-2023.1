@@ -2,7 +2,7 @@
 import {question} from 'readline-sync'
 
 function main() {
-    const data = question('Digite uma data,use (/) : ').split('/').map(Number)
+    const data = question('Digite uma data(/): ').split('/').map(Number)
     
     const data_valida = verificar_data(data)
 
