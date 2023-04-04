@@ -37,7 +37,6 @@ function main() {
    console.log(`Parcelamento: ${qtd_meses} prestações de ${parcela_cdc.toFixed(2)} reais`)
    console.log(`Total a pagar: ${pagamento_total_cdc.toFixed(2)}`)
 
-
    console.log(`\n------> CONSORCIO: <-------`)
    console.log(`Valor do Bem: ${valor_corolla_cross}`)
    console.log(`Entrada: ${entrada_lance}`)
