@@ -29,7 +29,7 @@ function main() {
    const mais_vantajoso = verifica_mais_economico(pagamento_total_cdc, pagamento_total_consorcio)
 
    
-   console.log(`\n-------> CDC <-------: `)
+   console.log(`\n-------> CDC: <-------`)
    console.log(`Valor do Bem: ${valor_corolla_cross}`)
    console.log(`Entrada: ${entrada_lance}`)
    console.log(`Valor a ser parcelado: ${valor_a_parcelar}`)

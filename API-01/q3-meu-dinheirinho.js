@@ -10,17 +10,16 @@ function main() {
     const qtd_filhos = Number(question('Quantidade de filhos menores de 6 anos: '))
     const valor_plano_de_saude = Number(question('Valor do plano de saude: '))
 
-
     const tipo_qualificacao = verifica_qualificacao(qualificacao)
-    const experiencia = verifica_experiencia(tempo_experiencia)        
+    const valor_base_qualificacao = calcula_valor_base_qualificacao(valor_base_hora_aula, tipo_qualificacao)
+    const experiencia = verifica_experiencia(tempo_experiencia)   
+    const novo_valor_base = novo_valor_base(valor_base_qualificacao, experiencia)   //
 
-    const hora_aula_qualificacao = valor_base_hora_aula * tipo_qualificacao 
-    const valor_hora_aula = hora_aula_qualificacao + experiencia
-
-    const valor_semanal = valor_hora_aula * horas_semanais 
+    const valor_hora_aula = valor_base_hora_aula / horas_semanais
+    const valor_semanal = novo_valor_base * horas_semanais 
     const salario_base_mensal = calcula_salario_base_mensal(valor_semanal)
 
-    console.log(`\n Professor(a): ${nome}`)
+
     console.log(`Valor Hora/Professor: R$ ${valor_hora_aula}`)
     console.log(`Valor Semanal: ${valor_semanal}`)
 
@@ -31,11 +30,11 @@ function main() {
     const salario_bruto = calcula_salario_bruto(auxilio_creche, ressasimento_saude, auxilio_combustivel)
 
     //Descontos:
-    const inss = calcula_inss(salario_base_mensal)
+    const inss = calcula_inss(salario_bruto)
     const ir = calcula_ir(salario_base_mensal)
-    const novo_valor = salario_base_mensal - inss
+    const novo_valor = salario_bruto - inss
 
-    const descontos = calcula_descontos(inss, novo_valor)
+    const descontos = calcula_descontos(inss, novo_valor) 
 
     const salario_liquido = calcula_salario_liquido(salario_bruto, descontos)
 
@@ -49,12 +48,10 @@ function main() {
     console.log(`Salario Bruto: ${salario_bruto.toFixed(2)}`)
 
     //Resultado dos Descontos:
-    console.log(`\n-----------> DESCONTOS < ----------`)
+    console.log(`\n---------> DESCONTOS <---------`)
     console.log(`INSS: R$ ${inss.toFixed(2)}`)
     console.log(`IR: R$${ir.toFixed(2)}`)
     console.log(`Salario Liquido: ${salario_liquido.toFixed(2)}`)
-
-
 }
 
 function verifica_qualificacao(qualificacao) {
@@ -69,6 +66,10 @@ function verifica_qualificacao(qualificacao) {
     }
 }
 
+function calcula_valor_base_qualificacao(valor_base_hora_aula, qualificacao) {
+    return valor_base_hora_aula * qualificacao
+}
+
 function verifica_experiencia(tempo_experiencia) {
     if (tempo_experiencia > 6) {
         return (tempo_experiencia / 6) * 0.5
@@ -76,6 +77,10 @@ function verifica_experiencia(tempo_experiencia) {
         return 0
     }
 }
+
+/* function novo_valor_base(calcula_valor_base_qualificacao, tempo_experiencia) {
+    return 
+} */
 
 function calcula_salario_base_mensal(valor_semanal) {
     return (valor_semanal * 4.5)
@@ -102,20 +107,20 @@ function calcula_salario_bruto(salario_base_mensal, auxilio_creche, ressasimento
 }
 
 function calcula_descontos(inss, novo_valor) {
-    return novo_valor + inss
+    return (novo_valor + inss)
 }
 
-function calcula_inss(salario_base_mensal) {
-    if (salario_base_mensal <= 1320) {
-        return (salario_base_mensal * 0.075 )
-    } else if (salario_base_mensal <= 2500) {
-        return (salario_base_mensal * 0.09)
-    } else if (salario_base_mensal <= 3900) {
-        return (salario_base_mensal * 0.12)
-    } else if (salario_base_mensal <= 7500) {
-        return (salario_base_mensal * 0.14)
+function calcula_inss(salario_bruto) {
+    if (salario_bruto <= 1320) {
+        return (salario_bruto * 0.075 )
+    } else if (salario_bruto <= 2500) {
+        return (salario_bruto * 0.09)
+    } else if (salario_bruto <= 3900) {
+        return (salario_bruto * 0.12)
+    } else if (salario_bruto <= 7500) {
+        return (salario_bruto * 0.14)
     } else {
-        return (salario_base_mensal * 0.16)
+        return (salario_bruto * 0.16)
     }
 }
 
@@ -123,7 +128,7 @@ function calcula_ir(novo_valor) { //Salario base - inss
     if(novo_valor <= 5000) {
         return 0
     } else {
-        return (novo_valor * 0.275)
+        return (novo_valor - 5000) * 0.275
     }
 }
 
