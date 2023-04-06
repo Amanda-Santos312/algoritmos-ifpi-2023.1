@@ -1,7 +1,7 @@
 import {question} from 'readline-sync'
 
 function main() {
-    const valor_base_hora_aula = Number(question('Valor base da hora aula: '))
+    const valor_base_hora_aula = Number(question('\nValor base da hora aula: '))
 
     const nome = question('\nNome: ')
     const horas_semanais = Number(question('Horas Semanais: '))
@@ -11,7 +11,7 @@ function main() {
     const valor_plano_de_saude = Number(question('Valor do Plano de Saude: '))
 
     const valor_hora = calcula_valor_hora(valor_base_hora_aula, horas_semanais)
-    const salario_base_semanal = valor_base_hora_aula * horas_semanais
+    const salario_base_semanal = valor_base_hora_aula * horas_semanais  //**
     const salario_base_mensal = salario_base_semanal * 4.5
 
     const valor_qualificacao = verifica_qualificacao(qualificacao, salario_base_mensal)
@@ -37,22 +37,22 @@ function main() {
     const salario_liquido = calcula_salario_liquido(salario_bruto, descontos)
 
     //Saída
-    console.log(`Professor(a): ${nome}`)
+    console.log(`\nProfessor(a): ${nome}`)
     console.log(`Valor hora: ${valor_hora.toFixed(2)}`)
-    console.log(`Salário base semanal: ${salario_base_semanal.toFixed(2)}`)
+    console.log(`Salario base semanal: ${salario_base_semanal.toFixed(2)}`)
 
-    console.log(`======> GANHOS: <=====`)
+    console.log(`\n======> GANHOS: <=====`)
     console.log(`Salario Base Mensal: ${salario_base_mensal_final.toFixed(2)}`)
     console.log(`Auxílio Creche: ${auxilio_creche.toFixed(2)}`)
-    console.log(`Ressarcimento Saúde ${ressarcimento_saude.toFixed(2)}`)
-    console.log(`Auxílio Combustível: ${auxilio_combustivel.toFixed(2)}`)
-    console.log(`\nSalário Bruto: ${salario_bruto.toFixed(2)}`)
+    console.log(`Ressarcimento Saude ${ressarcimento_saude.toFixed(2)}`)
+    console.log(`Auxílio Combustivel: ${auxilio_combustivel.toFixed(2)}`)
+    console.log(`\nSalario Bruto: ${salario_bruto.toFixed(2)}`)
 
     console.log(`\n=====> DESCONTOS: <=====`)
-    console.log(`Previdência: ${inss}`)
+    console.log(`Previdencia: ${inss}`)
     console.log(`Imposto de Renda: ${ir}`)
     console.log(`\nTotal de Descontos: ${descontos}`)
-    console.log(`Salário Líquido: ${salario_liquido}`)
+    console.log(`Salario Líquido: ${salario_liquido}`)
 }
 
 function calcula_valor_hora(valor_base_hora_aula, horas_semanais) {
@@ -109,17 +109,17 @@ function calcula_salario_bruto(salario_base_mensal_final, soma_beneficios) {
     return (salario_base_mensal_final + soma_beneficios)
 }
 
-function verifica_desconto_inss(salario_base_mensal_final) {
-    if (salario_base_mensal_final <= 1320) {
-        return salario_base_mensal_final - (salario_base_mensal_final * 0.075)
-    } else if (salario_base_mensal_final <= 2500) {
-        return salario_base_mensal_final - (salario_base_mensal_final * 0.09)
-    } else if(salario_base_mensal_final <= 3900) {
-        return salario_base_mensal_final - (salario_base_mensal_final * 0.12)
-    } else if (salario_base_mensal_final <= 7500) {
-        return salario_base_mensal_final - (salario_base_mensal_final * 0.14)
+function verifica_desconto_inss(salario_base_final) {
+    if (salario_base_final <= 1320) {
+        return salario_base_final - (salario_base_final * 0.075)
+    } else if (salario_base_final <= 2500) {
+        return salario_base_final - (salario_base_final * 0.09)
+    } else if (salario_base_final <= 3900) {
+        return salario_base_final - (salario_base_final * 0.12)
+    } else if (salario_base_final <= 7500) {
+        return salario_base_final - (salario_base_final * 0.14)
     } else {
-        return salario_base_mensal_final - (salario_base_mensal_final * 0.16)
+        return salario_base_final - (salario_base_final * 0.16)
     }
 }
 
