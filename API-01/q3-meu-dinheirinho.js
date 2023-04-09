@@ -59,6 +59,7 @@ function calcula_valor_hora(valor_base_hora_aula, horas_semanais) {
     return valor_base_hora_aula / horas_semanais
 }
 
+
 function verifica_qualificacao(qualificacao, salario_base_mensal) {
     if (qualificacao === 'E'){
         return salario_base_mensal + (0.2 * salario_base_mensal)
@@ -71,6 +72,7 @@ function verifica_qualificacao(qualificacao, salario_base_mensal) {
     }
 }
 
+
 function verifica_experiencia(tempo_experiencia, salario_base_mensal) {
     const valor = 0.5 * salario_base_mensal
     
@@ -81,13 +83,16 @@ function verifica_experiencia(tempo_experiencia, salario_base_mensal) {
     }
 }
 
+
 function calcula_valor_final_base(salario_base_mensal, valor_qualificacao, experiencia) {
     return salario_base_mensal + valor_qualificacao + experiencia
 }
 
+
 function calcula_auxilio_creche(qtd_filhos) {
     return qtd_filhos * 700
 }
+
 
 function calcula_ressarcimento(valor_plano_de_saude) {
     if (valor_plano_de_saude <= 1000) {
@@ -97,17 +102,21 @@ function calcula_ressarcimento(valor_plano_de_saude) {
     }
 }
 
+
 function calcula_auxilio_combustivel(horas_semanais) {
     return horas_semanais * 3.75
 }
+
 
 function calcula_beneficios(auxilio_creche, ressarcimento_saude, auxilio_combustivel) {
     return (auxilio_creche + ressarcimento_saude + auxilio_combustivel)
 }
 
+
 function calcula_salario_bruto(salario_base_mensal_final, soma_beneficios) {
     return (salario_base_mensal_final + soma_beneficios)
 }
+
 
 function verifica_desconto_inss(salario_base_final) {
     if (salario_base_final <= 1320) {
@@ -123,9 +132,11 @@ function verifica_desconto_inss(salario_base_final) {
     }
 }
 
+
 function valor_final_base_sem_inss(salario_base_mensal_final, inss) {
     return (salario_base_mensal_final - inss)
 }
+
 
 function verifica_desconto_ir(salario_mensal_sem_inss) {
     if (salario_mensal_sem_inss <= 5000) {
@@ -135,12 +146,15 @@ function verifica_desconto_ir(salario_mensal_sem_inss) {
     }
 }
 
+
 function soma_descontos(inss, ir) {
     return (inss + ir)
 }
 
+
 function calcula_salario_liquido(salario_bruto, descontos) {
     return (salario_bruto - descontos)
 }
+
 
 main()
