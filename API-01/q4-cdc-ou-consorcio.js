@@ -15,35 +15,28 @@ function main() {
 
    const entrada_lance = calcula_entrada(valor_argo_fipe, percentual_fipe)
    const valor_a_parcelar = verifica_valor_para_parcelar(valor_corolla_cross, entrada_lance)
-   const juros_cdc = calcula_juros_cdc(valor_a_parcelar, taxa_juros)
-   const juros_totais_cdc = calcula_juros_totais_cdc(juros_cdc, qtd_meses) 
-   const juros_totais_consorcio = calcula_juros_totais_consorcio(valor_corolla_cross, taxa_adm) 
-   const parcela_cdc = calcula_parcelamento_cdc(valor_a_parcelar, qtd_meses) 
-   const parcela_consorcio = calcula_parcela_consorcio(valor_a_parcelar, qtd_meses) 
+   const juros_cdc = calcula_juros_cdc(valor_a_parcelar, taxa_juros, qtd_meses)
+   const juros_consorcio = calcula_taxa_adm(valor_corolla_cross, taxa_adm) 
 
-   const pagamento_total_cdc = calcula_total_cdc(entrada_lance, valor_a_parcelar, juros_totais_cdc) 
-   const pagamento_total_consorcio = calcula_total_consorcio(entrada_lance, juros_totais_consorcio)
+   const parcela_cdc = calcula_parcela(valor_a_parcelar+juros_cdc, qtd_meses) 
+   const parcela_consorcio = calcula_parcela(valor_a_parcelar+juros_consorcio, qtd_meses) 
 
-   const mais_vantajoso = verifica_mais_economico(pagamento_total_cdc, pagamento_total_consorcio)
+   const mais_vantajoso = verifica_mais_economico(parcela_cdc, parcela_consorcio)
 
    //Saída
+   console.log(`\nValor do Bem: ${valor_corolla_cross}`)
+   console.log(`Entrada: ${entrada_lance}`)
+   console.log(`Valor a ser parcelado: ${valor_a_parcelar}`)
+
    console.log(`\n-------> CDC: <-------`)
-   console.log(`Valor do Bem: ${valor_corolla_cross}`)
-   console.log(`Entrada: ${entrada_lance}`)
-   console.log(`Valor a ser parcelado: ${valor_a_parcelar}`)
-   console.log(`Juros Totais: ${juros_totais_cdc.toFixed(2)}`)
-   console.log(`Parcelamento: ${qtd_meses} prestações de ${parcela_cdc.toFixed(2)} reais`)
-   console.log(`Total a pagar: ${pagamento_total_cdc.toFixed(2)}`)
+   console.log(`Juros Totais: ${juros_cdc.toFixed(2)}`)
+   console.log(`Parcelamento: ${qtd_meses} prestações de R$ ${parcela_cdc.toFixed(2)}`)
+   
+   console.log(`\n-------> CONSORCIO: <--------`)
+   console.log(`Taxa de Administração: ${juros_consorcio.toFixed(2)}`)
+   console.log(`Parcelamento: ${qtd_meses} prestações de R$ ${parcela_consorcio.toFixed(2)}`)
 
-   console.log(`\n------> CONSORCIO: <-------`)
-   console.log(`Valor do Bem: ${valor_corolla_cross}`)
-   console.log(`Entrada: ${entrada_lance}`)
-   console.log(`Valor a ser parcelado: ${valor_a_parcelar}`)
-   console.log(`Juros Totais: ${juros_totais_consorcio.toFixed(2)}`)
-   console.log(`Parcelamento: ${qtd_meses} prestações de ${parcela_consorcio.toFixed(2)} reais`)
-   console.log(`Total a pagar: ${pagamento_total_consorcio.toFixed(2)}`)
-
-   console.log(`\n----> O mais vantajoso é o: <------- `)
+   console.log(`\n----> MELHOR ESCOLHA: <------- `)
    console.log(`----> ${mais_vantajoso}`)
 }
 
@@ -57,49 +50,29 @@ function verifica_valor_para_parcelar(valor_corolla_cross, entrada) {
 }
 
 
-function calcula_juros_cdc(valor_a_parcelar, taxa_juros) {
-   return (taxa_juros / 100) * valor_a_parcelar  
+function calcula_juros_cdc(taxa_juros, valor_a_parcelar, qtd_meses) {
+   return (taxa_juros / 100) * valor_a_parcelar * qtd_meses
 }
 
 
-function calcula_juros_totais_cdc(juros_cdc, qtd_meses) {
-   return juros_cdc * qtd_meses
+function calcula_taxa_adm(valor_corolla_cross, taxa_adm) {
+   return valor_corolla_cross * (taxa_adm / 100) 
 }
 
 
-function calcula_juros_totais_consorcio(valor_corolla_cross, taxa_adm) {
-   return valor_corolla_cross * (taxa_adm / 100)
-}
-
-
-function calcula_parcelamento_cdc(valor_a_parcelar, qtd_meses) {
+function calcula_parcela(valor_a_parcelar, qtd_meses) {
    return (valor_a_parcelar / qtd_meses)
 }
 
 
-function calcula_parcela_consorcio(valor_a_parcelar, qtd_meses) {
-   return (valor_a_parcelar / qtd_meses)
-}
-
-
-function calcula_total_cdc(entrada, valor_a_parcelar) {
-   return (entrada + valor_a_parcelar)
-}
-
-
-function calcula_total_consorcio(entrada, valor_a_parcelar) {
-   return (entrada + valor_a_parcelar)
-}
-
-
-function verifica_mais_economico(pagamento_total_cdc, pagamento_total_consorcio) {
-   if (pagamento_total_cdc > pagamento_total_consorcio) {
+function verifica_mais_economico(parcela_cdc, parcela_consorcio) {
+   if (parcela_cdc > parcela_consorcio) {
       return 'CONSÓRCIO'
-   } else {
+   } else if (parcela_consorcio > parcela_cdc) {
       return 'CDC'
+   } else {
+      return 'CDC/Consórcio'
    }
 }
 
-
 main()
-
