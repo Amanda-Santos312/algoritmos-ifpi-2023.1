@@ -1,5 +1,5 @@
 # Algoritmos-ifpi-2023.1
-## 📂Repositório destinado à questões da matéria de algoritmos do curso Ads-Ifpi.😊
+## 📂Repositório destinado à matéria de algoritmos do curso Ads-Ifpi.
 
 ---
 + ## Comandos da Biblioteca Readline-sync do Node:
