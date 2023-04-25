@@ -16,7 +16,7 @@ export function obter_numero_positivo(label='\nDigite um numero positivo: ') {
     let numero = Number(question(label))
 
     while (numero <= 0) {
-        mostrar_texto ('\nEsse numero não é positivo!')
+        mostrar_texto ('Esse numero não é positivo!')
         numero = obter_numero(label)
     }
     return Number(numero)

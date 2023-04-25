@@ -1,0 +1,17 @@
+import { mostrar_texto, obter_numero_positivo } from './input-utils.js'
+import { eh_numero_perfeito, mostrar_somatorio_divisores } from './math-utils.js'
+
+function main() {
+    let limite_inicial = obter_numero_positivo()
+    const limite_final = obter_numero_positivo()
+
+    while (limite_inicial <= limite_final) {
+        if (eh_numero_perfeito(limite_inicial)) {
+            mostrar_texto(`> ${limite_inicial}`)
+            mostrar_somatorio_divisores(limite_inicial)
+        }
+        limite_inicial++
+    }
+}
+
+main()
