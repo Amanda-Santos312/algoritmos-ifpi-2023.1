@@ -9,7 +9,9 @@ function main() {
 
     while (contador <= n) {
         somatorio = somatorio + contador
-        console.log(contador++)
+        console.log(contador)
+
+        contador++
     }
     console.log(`A soma de 1 a ${n} é ${somatorio}`)
     

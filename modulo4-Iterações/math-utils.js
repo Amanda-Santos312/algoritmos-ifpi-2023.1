@@ -19,6 +19,10 @@ export function eh_divisor(candidato, numero) {
 }
 
 
+export function eh_multiplo(candidato, numero) {
+    return numero % candidato === 0
+}
+
 export function mostrar_somatorio_divisores(numero) {
     let atual = numero - 1
     mostrar_texto_inline('> ')

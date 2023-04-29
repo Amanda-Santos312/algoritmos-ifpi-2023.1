@@ -3,7 +3,6 @@
 import {question} from 'readline-sync'
 
 function main() {
-    //Estado Inicial
     let numero = Number(question('Digite um numero inteiro: '))
 
     while (numero != 0) {

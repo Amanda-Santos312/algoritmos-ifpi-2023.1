@@ -2,13 +2,13 @@
 import { obter_numero_positivo } from '../input-utils.js'
 
 function main() {
-    let ao = obter_numero_positivo('A0: ')
+    let a0 = obter_numero_positivo('A0: ')
     const limite = obter_numero_positivo('Valor final: ')
     const razao = obter_numero_positivo('Razao: ')
 
-    while (ao <= limite) {
-        console.log(ao)
-        ao = ao * razao
+    while (a0 <= limite) {
+        console.log(a0)
+        a0 = a0 * razao
     }
 }
 
