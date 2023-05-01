@@ -1,4 +1,3 @@
-//
 import {mostrar_texto, obter_numero_positivo} from './input-utils.js'
 
 function main() {
@@ -10,16 +9,17 @@ function main() {
 
     const capacidade = calcula_capacidade(l, c, p)
     const recomendado = capacidade * 0.85
-    const gasto_litros = calcula_valor(valor_cada_mil_litros, recomendado)
+    const gasto_litros = calcula_valor(recomendado, valor_cada_mil_litros)
     const litros_reposicao = recomendado * 0.1
-    const gasto_reposicao = calcula_valor_reposicao(valor_cada_mil_litros, litros_reposicao)
-    const gasto_total = calcula_total(gasto_litros, gasto_reposicao)
+    const gasto_reposicao = calcula_valor_reposicao(valor_cada_mil_litros, litros_reposicao) //Não ficou do jeito que eu queria :(
+    const gasto_mensal = calcula_total(gasto_litros, gasto_reposicao) //Consequentemente, esse valor não vai ficar certo
 
-    console.log(`\nCapacidade máxima: ${capacidade} litros`)
-    console.log(`Deve encher até: ${recomendado} litros`)
-    console.log(`Valor da água gasta: ${gasto_litros}`)
-    console.log(`Litros Reposição: ${litros_reposicao}`)
-    console.log(`Total a pagar por mês: ${gasto_total} `)
+    mostrar_texto(`\nCapacidade máxima: ${capacidade} l
+    \nCapacidade recomendada: ${recomendado} l
+    \nValor gasto com o recomendado: R$ ${gasto_litros}
+    \nLitros de reposição: ${litros_reposicao.toFixed(1)} l
+    \nValor da reposição: R$ ${gasto_reposicao.toFixed(2)}
+    \nTotal a pagar por mês: ${gasto_mensal.toFixed(2)} reais`)
 }   
 
 function calcula_capacidade(l, c, p) {
@@ -28,18 +28,28 @@ function calcula_capacidade(l, c, p) {
 }
 
 
-function calcula_valor(recomendado, valor_litros) {
-    return recomendado / 1000 * valor_litros //
-}
+function calcula_valor(recomendado, valor_cada_mil_litros) {
+    if (recomendado <= 1000) {
+        return valor_cada_mil_litros 
+    } else { //recomendado > 1000
+        const parte_inteira = Math.floor(recomendado / 1000)
+        return (parte_inteira * valor_cada_mil_litros) + 1000 //para o resto
+    }
+}  
 
 
-function calcula_valor_reposicao(valor_litros,litros_reposicao) {
-    return 
+function calcula_valor_reposicao(litros_reposicao, valor_cada_mil_litros) {
+    if (litros_reposicao <= 1000){
+        return valor_cada_mil_litros
+    } else {
+        const valor = Math.floor(litros_reposicao / 1000)
+        return (valor * valor_cada_mil_litros) + 1000
+    }
 }
 
 
 function calcula_total(gasto_litros, gasto_reposicao) {
-    return gasto_litros + gasto_reposicao
+   return gasto_litros + gasto_reposicao
 }
 
 main()
