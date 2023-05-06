@@ -7,7 +7,7 @@ function main() {
     const peso_a = 3.5
     const peso_b = 7.5
 
-    const media_ponderada = (nota_a * peso_a) + (nota_b * peso_b)
+    const media_ponderada = (nota_a * peso_a) + (nota_b * peso_b) / 11 
     //calcula_media(nota_a, nota_b, peso_a, peso_b)
 
     console.log(`MEDIA = ${media_ponderada.toFixed(5)}`)

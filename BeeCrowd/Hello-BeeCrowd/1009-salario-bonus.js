@@ -1,4 +1,4 @@
-//
+//Calcule a comissão de um funcionário de acordo com o salário fixo e o total de vendas.
 import {question} from 'readline-sync'
 
 function main() {
