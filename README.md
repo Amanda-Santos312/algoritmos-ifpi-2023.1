@@ -15,5 +15,4 @@
 ---
 + ## Aqui você vai encontrar:
      - ### Questões das listas Fábio organizadas de acordo com o assunto(modulo);
-     - ### Questões de provas;
-     - ### & questões do BeeCrowd.🐝
+     - ### Questões de provas e do BeeCrowd.🐝
