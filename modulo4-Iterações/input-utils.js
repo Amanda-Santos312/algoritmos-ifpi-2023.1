@@ -16,7 +16,7 @@ export function obter_numero_minimo(label = 'Digite um número: ', minimo = unde
     let numero = obter_numero(label)
 
     while (minimo != undefined && numero < minimo){
-        mostrar_texto(`Favor digite um número no mínimo 1320 !`)
+        mostrar_texto(`Favor digite um número no mínimo 1320: `)
         numero = obter_numero(label)
     }
 
