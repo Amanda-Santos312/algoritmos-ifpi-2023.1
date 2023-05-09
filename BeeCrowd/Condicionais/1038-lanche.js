@@ -25,5 +25,4 @@ function calcula_valor_lanche(codigo, qtd) {
         return 'Codigo invalido'
     }
 }
-
 main()

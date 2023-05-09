@@ -7,9 +7,8 @@ function main() {
     const limite = obter_numero_positivo('Valor final: ')
     const razao = obter_numero_positivo('Razao: ')
 
-    while (a0 <= limite) {
+    for(a0; a0 <= limite; a0 = a0 + razao){
         console.log(a0)
-        a0 = a0 + razao
     }
 }
 

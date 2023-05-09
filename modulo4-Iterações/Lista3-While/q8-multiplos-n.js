@@ -10,7 +10,7 @@ function main() {
     let contador 
 
     while (n >= limite_minimo && n <= limite_maximo ){
-        eh_multiplo
+        eh_multiplo()
         contador++
     }
 }
