@@ -2,13 +2,20 @@
 import {question} from 'readline-sync'
 
 function main() {
-    const a = Number(question('A: '))
-    const b = Number(question('B: '))
-    const c = Number(question('C: '))
-    const d = Number(question('D: '))
+    const [a, b, c, d] = question('Valores: ').split(' ').map(Number)
 
-    
+    const validacao = verifica_numero(a, b, c, d)
 
+    console.log(`${validacao}`)
+
+}
+
+function verifica_numero(a, b, c, d) {
+    if (b > c && d > a && (c + d > a + b) && (a, b, c, d > 0) && (a % 2 === 0)) {
+        return 'Valores aceitos'
+    } else {
+        return 'Valores nao aceitos'
+    }
 }
 
 main()
