@@ -1,4 +1,4 @@
-//
+//Leia um valor e mostre quantos notas ele é formado de cada cédula.
 import {mostrar_texto, obter_numero_positivo} from '../input-utils.js'
 
 function main() {
