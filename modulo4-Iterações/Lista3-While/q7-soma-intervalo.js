@@ -2,7 +2,7 @@
 import {obter_numero_positivo} from '../input-utils.js'
 
 function main() {
-    const n = obter_numero_positivo('Ate que numero: ')
+    const n = obter_numero_positivo('Numero: ')
 
     let contador = 1
     let somatorio = 0
