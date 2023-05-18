@@ -4,42 +4,44 @@ import { mostrar_texto, obter_numero_positivo } from '../input-utils.js'
 function main() {
     const valor = obter_numero_positivo('Valor: ')
 
+    const conversao = valor * 100 //Conversão por 100 é para o valor sair de duas casas decimais.
+    
     //NOTAS:
-    const notas_100 = Math.floor(valor / 100) 
-    const resto1 = valor % 100 
+    const notas_100 = Math.floor(conversao / 10000) 
+    const resto1 = conversao % 10000 
     
-    const notas_50 = Math.floor(resto1 / 50) 
-    const resto2 = resto1 % 50 
+    const notas_50 = Math.floor(resto1 / 5000) 
+    const resto2 = resto1 % 5000
     
-    const notas_20 = Math.floor(resto2 / 20) 
-    const resto3 = resto2 % 20 
+    const notas_20 = Math.floor(resto2 / 2000) 
+    const resto3 = resto2 % 2000
 
-    const notas_10 = Math.floor(resto3 / 10)
-    const resto4 = resto3 % 10
+    const notas_10 = Math.floor(resto3 / 1000)
+    const resto4 = resto3 % 1000
 
-    const notas_5 = Math.floor(resto4 / 5) 
-    const resto5 = resto4 % 5 
+    const notas_5 = Math.floor(resto4 / 500) 
+    const resto5 = resto4 % 500
 
-    const notas_2 = Math.floor(resto5 / 2) 
-    const resto6 = resto5 % 2 
+    const notas_2 = Math.floor(resto5 / 200) 
+    const resto6 = resto5 % 200
 
     //MOEDAS:
-    const moedas_1 = Math.floor(resto6 / 1) 
-    const resto7 = resto6 % 1
+    const moedas_1 = Math.floor(resto6 / 100) 
+    const resto7 = resto6 % 100
 
-    const moedas_50 = Math.floor(resto7 / 0.50)
-    const resto8 = resto7 % 0.5
+    const moedas_50 = Math.floor(resto7 / 50)
+    const resto8 = resto7 % 50
 
-    const moedas_25 = Math.floor(resto8 / 0.25)
-    const resto9 = resto8 % 0.25
+    const moedas_25 = Math.floor(resto8 / 25)
+    const resto9 = resto8 % 25
 
-    const moedas_10 = Math.floor(resto9 / 0.10)
-    const resto10 = resto9 % 0.10
+    const moedas_10 = Math.floor(resto9 / 10)
+    const resto10 = resto9 % 10
 
-    const moedas_05 = Math.floor(resto10 / 0.05)
-    const resto11 = resto10 % 0.05
+    const moedas_05 = Math.floor(resto10 / 5)
+    const resto11 = resto10 % 5
 
-    const moedas_01 = Math.floor(resto11 / 0.01)
+    const moedas_01 = Math.floor(resto11 / 1)
 
 
     mostrar_texto(`\n${valor}`)
