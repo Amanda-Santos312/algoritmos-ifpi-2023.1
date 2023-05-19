@@ -1,5 +1,5 @@
 
-import {obter_texto, mostrar_texto} from '../../API-SC03/input-utils.js'
+import {obter_texto, mostrar_texto} from '../../input-utils.js'
 
 function main() {
     const [a, d] = obter_texto().split(' ').map(Number)
