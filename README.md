@@ -8,11 +8,11 @@
 </div>
 
 ---
-+ ## Importante: 
-     ### Comandos da Biblioteca Readline-Sync do Node
-     - ### 1º npm init -y
-     - ### 2º npm install readline-sync
++ ### Importante: 
+     ### Comandos da Biblioteca Readline-Sync
+     - #### 1º npm init -y
+     - #### 2º npm install readline-sync
 ---
-+ ## Aqui você vai encontrar:
-     - ### Questões das listas Fábio organizadas de acordo com o assunto(modulo);
-     - ### Questões de provas e do BeeCrowd.🐝
++ ### Aqui você vai encontrar:
+     - #### Questões das listas Fábio organizadas de acordo com o assunto(modulo);
+     - #### Questões de provas e do BeeCrowd.🐝
