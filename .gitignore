@@ -1,5 +1,6 @@
 # Ignore a pasta node_modules
 node_modules
+.vscode 
 
 # Ignore os arquivos .json
 .json
