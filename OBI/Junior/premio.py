@@ -24,6 +24,6 @@ def verifica_premio(pontos):
     else:
         return 'N'
     
-    
+  
 main()    
     
