@@ -97,17 +97,3 @@ def eh_letra_minuscula(caractere):
     return codigo >= 97 and codigo <= 122
           
 main()
-
-
-'''def mostrar_caracteres_por_linha() :
-
-
-def caixa_alta(): 
-
-
-def caixa_baixa(): 
-
-
-def contem(texto, caracter):
-
-'''
