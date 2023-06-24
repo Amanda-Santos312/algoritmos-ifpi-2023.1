@@ -27,7 +27,7 @@ function ultima_letra(nome){
     return nome[nome.length - 1]
 }
 
-function quicksort(vetor, {chave = x => x, reverse = false} = {}){
+export function quicksort(vetor, {chave = x => x, reverse = false} = {}){
 
     if (vetor.length <= 1)
         return vetor
@@ -62,16 +62,6 @@ function filtro_colecao(colecao, funcao_criterio){
 
     return colecao_filtrada
 }
-
-/*function mapear_colecao(colecao, funcao_mapeadora){
-    const nova_colecao = []
-
-    for (const item in colecao){
-        nova_colecao.push(funcao_mapeadora(item))
-    }
-
-    return nova_colecao
-}*/
 
 
 main()
