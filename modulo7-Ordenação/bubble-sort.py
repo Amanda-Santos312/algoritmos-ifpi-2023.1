@@ -33,5 +33,4 @@ def bubble_sort(colecao, chave=lambda v: v, inverso=False):
 
         if not trocou:
             return colecao
-
 main()
