@@ -55,14 +55,5 @@ def filtro_colecao(colecao, funcao_criterio):
     
     return colecao_filtrada            
     
-
-''' def mapear_colecao(colecao, funcao_mapeadora):
-    nova_colecao = []
-    
-    for item in colecao:
-        nova_colecao.append(funcao_mapeadora(item))
-
-    return nova_colecao '''
-    
-    
+        
 main()
