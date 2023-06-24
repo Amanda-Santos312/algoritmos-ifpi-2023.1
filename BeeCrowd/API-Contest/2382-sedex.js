@@ -1,3 +1,4 @@
+//INCOMPLETA
 import { obter_texto, mostrar_texto } from '../../input-utils.js'
 
 function main() {
