@@ -12,6 +12,7 @@
      ### Comandos da Biblioteca Readline-Sync
      - #### 1º npm init -y
      - #### 2º npm install readline-sync
+     - #### 3º adicionar: ""type": "module"" no arquivo package.json
 ---
 + ### Aqui você vai encontrar:
      - #### Questões das listas Fábio organizadas de acordo com o assunto(modulo);
